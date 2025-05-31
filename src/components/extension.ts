@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { getTagName, getSmartKeyword, getInsertText } from './utils';
+import { getTagName, getSmartKeyword, getInsertText } from '../helpers/utils';
 
 let userChoice: 'auto' | 'manual' | undefined = undefined;
 

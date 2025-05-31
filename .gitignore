@@ -4,7 +4,8 @@ dist/
 out/
 coverage/
 .vscode-test/
-.vscode/
+.vscode/*
+!.vscode/launch.json
 
 # Logs
 npm-debug.log*
