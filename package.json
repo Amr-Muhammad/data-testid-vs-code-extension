@@ -39,6 +39,19 @@
       }
     }
   },
+  "keywords": [
+    "testid",
+    "data-testid",
+    "qa",
+    "selector",
+    "html",
+    "automation",
+    "angular",
+    "react",
+    "vue",
+    "e2e",
+    "component testing"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Amr-Muhammad/data-testid-vs-code-extension"
