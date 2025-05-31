@@ -1,6 +1,7 @@
 {
   "name": "data-testid-generator",
   "displayName": "data-testid-generator",
+  "publisher": "AmrMuhammad",
   "description": "Smartly inserts data-testid attributes in HTML",
   "version": "0.0.1",
   "engines": {
