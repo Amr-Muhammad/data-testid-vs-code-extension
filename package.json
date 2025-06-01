@@ -3,7 +3,7 @@
   "displayName": "data-testid-generator",
   "publisher": "AmrMuhammad",
   "description": "Smartly inserts data-testid attributes in HTML",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -16,7 +16,7 @@
     "onLanguage:typescriptreact",
     "onLanguage:vue"
   ],
-  "main": "./out/extension.js",
+  "main": "./out/components/extension.js",
   "contributes": {
     "commands": [
       {
@@ -52,6 +52,7 @@
     "e2e",
     "component testing"
   ],
+  "icon": "media/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Amr-Muhammad/data-testid-vs-code-extension"

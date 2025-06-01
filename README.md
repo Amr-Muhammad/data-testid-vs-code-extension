@@ -1,6 +1,11 @@
 # Data TestId Generator
 
-🧪 A smart Visual Studio Code extension for inserting `data-testid` attributes in HTML files (Angular-compatible).
+🧪 A smart Visual Studio Code extension for inserting `data-testid` attributes in HTML files (Angular, React, and Vue templates).
+
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/AmrMuhammad.data-testid-generator.svg?label=Download)](https://marketplace.visualstudio.com/items?itemName=AmrMuhammad.data-testid-generator)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
+---
 
 ## 🔧 Features
 

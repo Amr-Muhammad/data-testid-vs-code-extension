@@ -47,10 +47,13 @@ export async function activate(context: vscode.ExtensionContext) {
 
 				const line = document.lineAt(position.line).text;
 				const tag = getTagName(line) || 'element';
-				const keyword = getSmartKeyword(tag, line);
+				const nextLine = position.line + 1 < document.lineCount
+					? document.lineAt(position.line + 1).text
+					: '';
+				const keyword = getSmartKeyword(tag, line, nextLine);
 
 				const insertText = userChoice === 'auto'
-					? `data-testid=\"${getInsertText(tag, keyword, prefix)}\"`
+					? `data-testid="${getInsertText(tag, keyword, prefix)}"`
 					: 'data-testid="$1"';
 
 				const completion = new vscode.CompletionItem('data-testid', vscode.CompletionItemKind.Snippet);
