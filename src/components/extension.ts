@@ -45,12 +45,19 @@ export async function activate(context: vscode.ExtensionContext) {
 					return [];
 				}
 
-				const line = document.lineAt(position.line).text;
-				const tag = getTagName(line) || 'element';
-				const nextLine = position.line + 1 < document.lineCount
-					? document.lineAt(position.line + 1).text
-					: '';
-				const keyword = getSmartKeyword(tag, line, nextLine);
+				// 👇 Collect full tag (even if spans multiple lines)
+				let fullTag = '';
+				let lineNum = position.line;
+				while (lineNum < document.lineCount) {
+					const text = document.lineAt(lineNum).text.trim();
+					fullTag += ' ' + text;
+					if (text.includes('>')) break;
+					lineNum++;
+				}
+
+				fullTag = fullTag.trim();
+				const tag = getTagName(fullTag) || 'element';
+				const keyword = getSmartKeyword(tag, fullTag);
 
 				const insertText = userChoice === 'auto'
 					? `data-testid="${getInsertText(tag, keyword, prefix)}"`
@@ -64,6 +71,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 				return [completion];
 			}
+
 		}
 	);
 
